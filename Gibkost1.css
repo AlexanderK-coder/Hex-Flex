@@ -64,11 +64,7 @@ h2 {
 
 .header {
   display: flex;
-  
-  /* BEGIN (write your solution here) */
   flex-wrap: wrap;
-  /* END */
-
   align-items: center;
   justify-content: space-between;
 
@@ -77,12 +73,10 @@ h2 {
 
 .nav-horizontal {
   display: flex;
-  
-  /* BEGIN (write your solution here) */
   flex-wrap: wrap;
-  /* END */
-
   justify-content: space-between;
+  margin: 0;
+  padding: 0;
 
   list-style: none;
 }
@@ -107,28 +101,23 @@ h2 {
 }
 
 .catalog {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  
   /* BEGIN (write your solution here) */
-  max-width: 1280px;
+  display: flex;
+  flex-direction: column;   
   /* END */
+  width: 100%;
+  max-width: 1280px;
+
+  margin: 0 auto;
 
   padding-right: 15px;
   padding-left: 15px;
 }
 
 .catalog-item {
-
   /* BEGIN (write your solution here) */
-  flex: 1 1 200px;
   
   /* END */
-  min-width: 200px;
-  max-width: none;
-  
   margin: 5px;
   padding: 10px 25px;
 
@@ -149,3 +138,33 @@ h2 {
   color: #666;
   font-weight: bold;
 }
+
+/* BEGIN (write your solution here) */
+@media (min-width: 600px) {
+  .catalog {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.catalog-item {
+  flex: 1 1 50%;
+  margin: 0;
+   
+}
+}
+@media (min-width: 1200px) {
+  .catalog {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.catalog-item {
+ flex: 1 1 32%;
+  max-width: 400px;
+  margin: 5px;
+  
+}
+}
+/* END */
