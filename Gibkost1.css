@@ -143,7 +143,6 @@ h2 {
 }
 
 /* BEGIN (write your solution here) */
-@media (min-width: 1200px) {
  @media (min-width: 600px) and (max-width: 1199px) {
   .catalog-item {
     width: 50%;
